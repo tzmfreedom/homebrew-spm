@@ -20,7 +20,7 @@ class Spm < Formula
   end
 
   def install
-    mv @@binname 'spm'
+    mv @@binname, 'spm'
     bin.install 'spm'
   end
 
