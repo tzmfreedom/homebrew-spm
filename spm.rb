@@ -1,22 +1,18 @@
-# Documentation: http://docs.brew.sh/Formula-Cookbook.html
-#                http://www.rubydoc.info/github/Homebrew/brew/master/Formula
-# PLEASE REMOVE ALL GENERATED COMMENTS BEFORE SUBMITTING YOUR PULL REQUEST!
-
 class Spm < Formula
   desc "Salesforce Package Manager"
   homepage "https://github.com/tzmfreedom/spm"
 
-  @@version = "0.1.1"
+  @@version = "0.2.0"
   version @@version
 
   if Hardware::CPU.is_64_bit?
-    @@binname = 'spm-darwin64'
+    @@binname = 'spm-darwin-amd64'
     url "https://github.com/tzmfreedom/spm/releases/download/v#{@@version}/#{@@binname}"
-    sha256 '2ac1b4da1ae01bcdd5915e067c06de1f71c6205f052a1641cd74af6aaa2eda8e'
+    sha256 '9caf79ef99f33990c9394fc527fc4047578d4231221e4b7dd1b5b8b41c96730f'
   else
-    @@binname = 'spm-darwin386'
+    @@binname = 'spm-darwin-386'
     url "https://github.com/tzmfreedom/spm/releases/download/v#{@@version}/#{@@binname}"
-    sha256 '0059b5e4cd06f1ad17e08f9ebb6c5fb223f56b26c75f44c98193e91af03bb33b'
+    sha256 'd64fbcbbd04c89a940b701befc9690018878d6661e3fa614c0bf29cd5d38432a'
   end
 
   def install
